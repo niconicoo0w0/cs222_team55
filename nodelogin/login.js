@@ -1,17 +1,22 @@
+// include mysql, express, express-session, path to node.js
 const mysql = require('mysql');
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
 
+// connection to local MySQL database
+// information like password can change based on MySQL setting
 const connection = mysql.createConnection({
 	host     : 'localhost',
 	user     : 'root',
-	password : 'kwr2#1108UIUC',
+	password : '',
 	database : 'nodelogin'
 });
 
+// initialize express
 const app = express();
 
+// associate modules used in express
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -21,12 +26,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'static')));
 
+// declare the login route
 // http://localhost:3000/
 app.get('/', function(request, response) {
 	// Render login template
 	response.sendFile(path.join(__dirname + '/login.html'));
 });
 
+// Authentication
 // http://localhost:3000/auth
 app.post('/auth', function(request, response) {
 	// Capture the input fields
@@ -56,6 +63,8 @@ app.post('/auth', function(request, response) {
 	}
 });
 
+// create home route with username
+// in the future this will direct to the library page
 // http://localhost:3000/home
 app.get('/home', function(request, response) {
 	// If the user is loggedin
@@ -69,4 +78,5 @@ app.get('/home', function(request, response) {
 	response.end();
 });
 
+// listen on port 3000 for test
 app.listen(3000);
