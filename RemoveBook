@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Book</title>
+    <script src="https://unpkg.com/mongodb@4.2.2/lib/browser/mongodb.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        label {
+            display: inline-block;
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        input[type=text], input[type=number] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid #ddd;
+        }
+
+        button[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        button[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Remove Book</h1>
+
+    <form onsubmit="removeBook(event)">
+        <label for="bookId">Book ID:</label>
+        <input type="text" id="bookId" name="bookId"><br><br>
+
+        <button type="submit">Remove Book</button>
+    </form>
+
+    <script>
+        async function removeBook(event) {
+            event.preventDefault();
+
+            const bookId = document.getElementById('bookId').value;
+
+            const client = new mongodb.MongoClient('mongodb://localhost:27017');
+            await client.connect();
+            const db = client.db('myLibrary');
+            const book = await db.collection('books').findOne({ _id: mongodb.ObjectId(bookId) });
+
+            if (!book) {
+                console.log(`Book with ID ${bookId} not found.`);
+                await client.close();
+                return;
+            }
+
+            if (book.count === 0) {
+                await db.collection('books').deleteOne({ _id: mongodb.ObjectId(bookId) });
+                console.log(`Book with ID ${bookId} removed from database.`);
+            } else {
+                console.log(`Book with ID ${bookId} has a count of ${book.count}.`);
+
+                if (book.count === 1) {
+                    await db.collection('books').updateOne({ _id: mongodb.ObjectId(bookId) }, { $set: { count: 0 } });
+                    console.log(`Book with ID ${bookId} removed from database.`);
+                } else {
+                    await db.collection('books').updateOne({ _id: mongodb.ObjectId(bookId) }, { $inc: { count: -1 } });
+                    console.log(`Count of book with ID ${bookId} decremented to ${book.count - 1}.`);
+                }
+            }
+
+            await client.close();
+
+            document.getElementById('bookId').value = '';
+        }
+    </script>
+</body>
+</html>
