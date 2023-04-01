@@ -1,0 +1,113 @@
+.signupContainer {
+    background-image: url("../img/livingRoom.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-color: brown;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .signupContainer .signupForm {
+    border: 1px solid lightgray;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signupContainer .text {
+    font-size: 30px;
+  }
+
+  .signupContainer .formBox .formLabel .formInput {
+    width: 100%;
+    border: 0.5px solid black;
+    height: 34px;
+    padding-block: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+
+  .signupContainer .formBox {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formBox .formLabel{
+    margin-block: 10px;
+    width: 100%;
+  }
+
+  .formBox .formLabel .visually-hidden {
+    font-size: 21px;
+    margin-block: 14px;
+    width: 100%;
+    display: flex;
+    border: 0.5px solid black;
+    margin-block: 5px;
+    padding-block: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+  }
+
+  .signupContainer .formBox .formLabel .formInput {
+    width: 100%;
+    border: 0.5px solid black;
+    height: 34px;
+    padding-block: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+
+  .formBox .submitButton {
+    background-color: rgb(53, 209, 6);
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 20px;
+    margin-bottom: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.3s;
+  }
+
+  .submitButton:hover {
+    background-color: gray;
+  }
+
+  .submitButton .submitButtonText {
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .SwitchToLogin {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.SwitchToLogin .LinkToLogin {
+  text-decoration: none;
+  color: blue;
+  font-weight: bolder;
+}
