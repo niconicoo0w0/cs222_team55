@@ -1,0 +1,17 @@
+.mainFooter {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    background-color: blue;
+    position: relative;
+  }
+  
+  .mainFooter .footerText {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #B87333;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }

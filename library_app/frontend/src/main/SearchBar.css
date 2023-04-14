@@ -1,0 +1,80 @@
+.searchBar {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+    min-height: 70vh;
+    position: relative;
+}
+
+.visually-hidden {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+  
+.searchBar .searchBarLabel {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+}
+  
+.setHover {
+    font-family: cursive;
+    font-size: 60px;
+    color: #DAF7A6;
+}
+  
+  .setHover:hover {
+    color:#7FFFD4	;
+    animation: jump 0.3s linear;
+    animation-play-state: running;  
+  }
+
+  @keyframes jump {
+    from {
+      transform: translateY(0px);
+      opacity:1;
+    }
+    50% {
+      transform: translateY(-15px);
+      opacity:1.75;
+    }
+    to {
+      transform: translateY(0px);
+      opacity:1;
+    }
+  }
+  
+  .searchBar .searchBarInput {
+    width: 30vw;
+    height: 50px;
+    background: #E1C16E	;
+    border: none;
+    border-radius: 30px;
+    color: black;
+    user-select: none;
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 8px;
+  }
+  
+
+
+  input:focus {
+    outline-width: 0;
+  }
+  
+.searchBar .searchBarButton {
+    width: 100px;
+    height: 30px;
+    color: black;
+    margin-top: 15px;
+    border-radius: 20px;
+    background:#CC7722;
+}
