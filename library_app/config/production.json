@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://Kaiwen Ren:ren082524@cluster0.hifelyn.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+   }
