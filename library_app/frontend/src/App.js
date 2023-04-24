@@ -37,6 +37,7 @@ function App() {
 	}, []);
 
 	return (
+		<>		
 		<Provider store={store}>
 			<Router>
 				<NavbarItem />
@@ -65,6 +66,7 @@ function App() {
 				</Switch>
 			</Router>
 		</Provider>
+		</>
 	);
 }
 
