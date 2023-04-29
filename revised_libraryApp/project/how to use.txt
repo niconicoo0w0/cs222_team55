@@ -1,6 +1,6 @@
-确保安装了node 和npm
-使用VSCODE,进入project根路径，打开terminal。
-分别依次执行:
-npm install
-npm install -g @vue/cli 
-npm run serve
+install node and npm
+use VSCODE, go to project，open terminal。
+run the following executions:
+  npm install
+  npm install -g @vue/cli 
+  npm run serve
