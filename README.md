@@ -48,11 +48,11 @@ One database is called  It stores books in the library and has the following inf
 
 ## How to use
 
-Prerequisites:
+### Prerequisites:
 - Node.js
 - npm
 
-Installation:
+### Installation:
 - Download the project files
 - Open the terminal in the root directory of the project
 - Execute the following commands in the terminal:
@@ -61,18 +61,14 @@ Installation:
   - chmod 777 /path/to/vue-cli-service
   - npm run serve
   
-Note:
-It is important to make sure that Node.js and npm are installed before proceeding with the installation process.
+### Note:
+- It is important to make sure that Node.js and npm are installed before proceeding with the installation process.
+- This project was developed using VSCode, but it can also be run using other code editors or IDEs.
+- The "npm install" command installs all the necessary dependencies required to run the project.
+- The "npm install -g @vue/cli" command installs the Vue CLI globally, which is required for running the project.
+- The "chmod 777 /path/to/vue-cli-service" command grants the necessary permissions for running the Vue CLI service.
+- The "npm run serve" command runs the project on a local server.
 
-This project was developed using VSCode, but it can also be run using other code editors or IDEs.
-
-The "npm install" command installs all the necessary dependencies required to run the project.
-
-The "npm install -g @vue/cli" command installs the Vue CLI globally, which is required for running the project.
-
-The "chmod 777 /path/to/vue-cli-service" command grants the necessary permissions for running the Vue CLI service.
-
-The "npm run serve" command runs the project on a local server.
 
 After successfully executing the above commands, the project should be up and running on a local server, and can be accessed through a web browser. If any issues arise during the installation process, please refer to the troubleshooting guide or contact the development team for assistance.
 
