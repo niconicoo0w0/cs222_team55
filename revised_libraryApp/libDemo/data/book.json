@@ -1,0 +1,31 @@
+{
+    "_id" : ObjectId("6440eaebfc1ff65ccb80f32c"),
+    "title" : "Old man and sea",
+    "bookId" : "1",
+    "author" : "Hamingway",
+    "stock" : NumberInt(10),
+    "publicationYear" : NumberInt(2015)
+}
+{
+    "_id" : ObjectId("6440eb48fc1ff65ccb80f32e"),
+    "title" : "harry potter",
+    "bookId" : "2",
+    "author" : "JK ROLIN",
+    "stock" : NumberInt(9),
+    "publicationYear" : NumberInt(2017),
+    "review" : [
+        "nice",
+        "hello"
+    ]
+}
+{
+    "_id" : ObjectId("6440ec238e158d48639a099a"),
+    "title" : "harry potter Ⅱ",
+    "bookId" : "3",
+    "author" : "JK ROLIN",
+    "stock" : NumberInt(10),
+    "publicationYear" : NumberInt(2018),
+    "review" : [
+        "nice"
+    ]
+}

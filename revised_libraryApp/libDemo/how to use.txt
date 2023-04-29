@@ -1,0 +1,3 @@
+确保安装了maven， JDK8
+配置好mongodb，然后找到LibDemoApplication，进入类后右键run,启动。
+再去启动前端。

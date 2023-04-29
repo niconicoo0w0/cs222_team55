@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("6440d7d45fb3d0781db652ae"),
+    "title" : "harry potter",
+    "author" : "JK Rolin",
+    "bookId" : "1",
+    "endDate" : ISODate("2024-01-28T16:00:00.000+0000"),
+    "userId" : "1000"
+}

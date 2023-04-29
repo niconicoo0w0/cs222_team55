@@ -1,0 +1,21 @@
+{
+    "_id" : ObjectId("644098a305caee057226fd2c"),
+    "userId" : "1000",
+    "userName" : "admin",
+    "password" : "123456",
+    "role" : "admin"
+}
+{
+    "_id" : ObjectId("644098b105caee057226fd2d"),
+    "userId" : "1001",
+    "userName" : "harlan",
+    "password" : "123456",
+    "role" : "student"
+}
+{
+    "_id" : ObjectId("6440e91fb728983590209e8e"),
+    "userId" : "1004",
+    "userName" : "luffy",
+    "password" : "123456",
+    "role" : "student"
+}
