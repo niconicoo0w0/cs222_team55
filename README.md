@@ -25,6 +25,9 @@ The system has the following functionalities:
 - Rate books and write reviews
 - Search books
 
+## Architecture
+![alt text](https://github.com/niconicoo0w0/cs222_team55/blob/e619e3754723b0c503495f4fc2644b34edd404ab/revised_libraryApp/librarySystemArchitecture.png)
+
 ## Components
 ### Frontend: 
 JavaScript & React.js. These technologies will be used to build a user-friendly
