@@ -72,4 +72,8 @@ One database is called  It stores books in the library and has the following inf
 
 After successfully executing the above commands, the project should be up and running on a local server, and can be accessed through a web browser. If any issues arise during the installation process, please refer to the troubleshooting guide or contact the development team for assistance.
 
-:)
+### Work Distribution: 
+- Xuanzhen Chang: built up backend service (BookService.java, UserService.java)
+- Kaiwen Ren: built up user controller and entity (UserController.java, Result.java)
+- Zhilan Wang: built up book controller and a part of frontend (BookController.java, Home.vue)
+- Xiangcan Li: built up the rest part of the frontend (rest files in the frontend)
